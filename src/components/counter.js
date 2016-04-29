@@ -1,13 +1,13 @@
 import React, { Component, PropTypes } from 'react'
 
 class Counter extends Component {
-  constructor() {
+  constructor(props) {
     super(props)
     this.incrementAsync = this.incrementAsync.bind(this)
     this.incrementIfOdd = this.incrementIfOdd.bind(this)
   }
 
-  static propTypes = {
+  static propTypes= {
       value: PropTypes.number.isRequired,
       onIncrement: PropTypes.func.isRequired,
       onDecrement: PropTypes.func.isRequired
@@ -24,8 +24,9 @@ class Counter extends Component {
   }
 
   render() {
-    const { value, onIncrement, onDecrement } = this.props;
-    return {
+    const { value, onIncrement, onDecrement, enabled} = this.props
+
+    return (
       <p>
         Clicked: {value} times
         {' '}
@@ -33,20 +34,22 @@ class Counter extends Component {
         +
         </button>
         {' '}
-        <button onClick={onDecrement}>
+        <button onClick={onDecrement} disabled={enabled}>
         -
         </button>
         {' '}
-        <button onClick={this.incrementIfOdd()}>
+        <button onClick={this.incrementIfOdd}>
         incrementIfOdd if odd
         </button>
         {' '}
-        <button onClick={this.incrementAsync()}>
+        <button onClick={this.incrementAsync}>
         increment async
         </button>
-        </p>
+      </p>
+    )
     }
-  }
 }
+
+
 
 export default Counter
