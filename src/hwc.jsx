@@ -6,9 +6,9 @@ export default class HelloWorldComponent extends React.Component {
         this.state = { messages: ["john","arish","volker"]};
     }
 
-    // getInitialState() {
-    //   console.log('answer me!');
-    // }
+    getInitialState() {
+      console.log('answer me!');
+    }
 
     render() {
         return (
