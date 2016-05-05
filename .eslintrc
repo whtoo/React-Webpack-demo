@@ -1,20 +1,4 @@
 {
-<<<<<<< HEAD
-  "plugins": [
-    "react"
-  ],
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module",
-   "ecmaFeatures": {
-     "jsx": true
-   }
-  },
-  "env": {
-   "es6": true
- },
-  "extends": ["eslint:recommended", "plugin:react/recommended"]
-=======
   "parser": "babel-eslint",
   "plugins": [
     "react"
@@ -23,6 +7,6 @@
     "ecmaFeatures": {
       "jsx": true
     }
-  }
->>>>>>> aced4ff4c7a8249d459edaf45b3b9b773b1eef43
+  },
+    "extends": ["eslint:recommended", "plugin:react/recommended"]
 }
